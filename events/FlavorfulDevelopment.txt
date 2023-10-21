@@ -1,0 +1,29 @@
+# This file to add events on province development
+namespace = flavorful_development
+
+# Main event
+province_event = {
+    # major = yes
+    # major_trigger = { # Alert any owner neighbor close to the province
+    #    area = {
+    #        any_neighbor_country = yes
+    #    }
+    #    ROOT = {
+    #        any_neighbor_country = yes
+    #    } 
+    #}
+    id = flavorful_development.1
+
+    title = "flavorful_development.1.t"
+    desc = "flavorful_development.1.d"
+    picture = BURGHER_ESTATE_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = flavorful_development.1.a
+        add_base_tax = 1
+        add_base_production = 1
+        add_base_manpower = 1
+    }
+}
