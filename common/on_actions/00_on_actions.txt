@@ -2051,8 +2051,6 @@ on_dip_development = {
 	province_event = {
 		id = flavorful_development.1
 	}
-	add_base_tax = 1
-	add_base_manpower = 1
 
 	if = { 
 		limit = { 

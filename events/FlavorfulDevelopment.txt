@@ -3,6 +3,43 @@ namespace = flavorful_development
 
 # Main event
 province_event = {
+
+    immediate = {
+        add_base_production = -1
+
+        # set base cost
+        set_variable = {
+            which = dev_base_cost
+            value = 50 # from defines
+        }
+
+        # Refund the cost of initial deving
+        set_variable = {  # Increment
+            which = set_power_while
+            value = 1
+        }
+        owner = {
+            while = {
+                limit = {
+                    PREV = {
+                        check_variable = {
+                            which = dev_base_cost
+                            which = set_power_while
+                        }
+                    }
+                }
+
+                add_dip_power = 1
+                PREV = {
+                    change_variable = {
+                        which = set_power_while
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+
     # major = yes
     # major_trigger = { # Alert any owner neighbor close to the province
     #    area = {
